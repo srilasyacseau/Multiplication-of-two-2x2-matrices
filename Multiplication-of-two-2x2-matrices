@@ -1,0 +1,90 @@
+#include <stdio.h>
+int main()
+{
+    int i,j,k,a[2][2],b[2][2],c[2][2];
+    
+    
+    printf("\n\tEnter the elements of the first matrix:\n\n");
+    
+    
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("\ta[%d][%d]: ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+        
+        printf("\n");
+    }
+    
+     printf("\tThe first matrix is:\n\n");
+    
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("\t%d",a[i][j]);
+        }
+        
+        printf("\n");
+    }
+    
+    
+     printf("\n\tEnter the elements of the second matrix:\n\n");
+    
+    
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("\tb[%d][%d]: ",i,j);
+            scanf("%d",&b[i][j]);
+        }
+        
+        printf("\n");
+    }
+    
+     printf("\n\tThe second matrix is:\n\n");
+    
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("\t%d",b[i][j]);
+        }
+        
+        printf("\n");
+    }
+    
+    
+   for(i=0;i<2;i++)
+   {
+     for(j=0;j<2;j++)
+    {
+        
+       c[i][j] = 0;
+       
+       
+       for(k=0;k<2;k++)
+       {
+          c[i][j] = c[i][j]+a[i][k]*b[k][j];
+       }
+    }
+    
+   }
+   
+   printf("\n\tThe product of the given two matrices is:\n\n");
+   
+   for(i=0;i<2;i++)
+   {
+       printf("\n");
+       for(j=0;j<2;j++)
+       {
+          printf("\t%d",c[i][j]);
+       }
+   }
+    
+    return 0;
+    
+}
